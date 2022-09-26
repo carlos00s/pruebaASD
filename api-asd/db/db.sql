@@ -17,3 +17,8 @@ CREATE TABLE personajes(
 );
 
 DESCRIBE personajes;
+
+CREATE TABLE vehiculo(
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tipo VARCHAR(100)
+);
