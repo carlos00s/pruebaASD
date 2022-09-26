@@ -1,0 +1,55 @@
+<div class="col-md-4 offset-md-2            ">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group p-2">
+                    <input type="text" name="alias" placeholder="Alias" class="form-control" [(ngModel)]="personaje.alias" autofocus>
+                </div>
+                <div class="form-group p-2">
+                    <input type="text" name="nombre" placeholder="Nombre" class="form-control" [(ngModel)]="personaje.nombre" >
+                </div>
+                <div class="form-group p-2">
+                    <input type="text" name="inclinacion" placeholder="Inclinacion" class="form-control" [(ngModel)]="personaje.inclinacion" >
+                </div>
+                <div class="form-group p-2">
+                    <input type="text" name="grupo" placeholder="Grupo al que pertenece" class="form-control" [(ngModel)]="personaje.grupo" >
+                </div>
+                <div class="form-group p-2">
+                    <input type="text" name="lugarOperacion" placeholder="Lugar donde opera" class="form-control" [(ngModel)]="personaje.lugarOperacion" >
+                </div>
+                <div class="form-group p-2">
+                    <input type="text" name="condicion" placeholder="Condicion" class="form-control" [(ngModel)]="personaje.condicion" >
+                </div>
+                <div class="form-group p-2">
+                    <textarea name="tipoPoder" placeholder="Describa los poderes" rows="2" class="form-control" [(ngModel)]="personaje.tipoPoder"></textarea>
+                </div>
+                <div class="form-group p-2">
+                    <input type="text" name="vehiculo" placeholder="Tiene vehiculo" class="form-control" [(ngModel)]="personaje.vehiculo" >
+                </div>
+                <div class="form-group p-2">
+                    <input type="text" name="tipoVehiculo" placeholder="Tipo de vehiculo" class="form-control" [(ngModel)]="personaje.tipoVehiculo" >
+                </div>
+                <div class="form-group p-2">
+                    <input type="url" name="imagen" placeholder="URL imagen" class="form-control" [(ngModel)]="personaje.imagen">
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success" type="button" (click)="edit ? update() : agregar()">ENVIAR</button>
+                  </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <img [src]="personaje.imagen" class="card-img-top">
+        <h3>{{personaje.alias}}</h3>
+        <p>{{personaje.nombre}}</p>
+        <p>{{personaje.inclinacion}}</p>
+        <p>{{personaje.grupo}}</p>
+        <p>{{personaje.lugarOperacion}}</p>
+        <p>{{personaje.condicion}}</p>
+        <p>{{personaje.tipoPoder}}</p>
+        <p>{{personaje.vehiculo}}</p>
+        <p>{{personaje.tipoVehiculo}}</p>
+    </div>
+</div>
